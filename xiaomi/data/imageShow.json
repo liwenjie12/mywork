@@ -1,0 +1,7 @@
+[
+  {"id": 1, "path": "image/img-show-1.jpg","index":"z-index:5"},
+  {"id": 2, "path": "image/img-show-2.jpg","index":"z-index:4"},
+  {"id": 3, "path": "image/img-show-3.jpg","index":"z-index:3"},
+  {"id": 4, "path": "image/img-show-4.jpg","index":"z-index:2"},
+  {"id": 5, "path": "image/img-show-5.jpg","index":"z-index:1"}
+]
