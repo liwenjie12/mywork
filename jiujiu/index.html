@@ -1,0 +1,116 @@
+<!doctype html>
+<html lang="en">
+ <head>
+  <meta charset="UTF-8">
+  <meta name="Generator" content="EditPlus®">
+  <meta name="Author" content="">
+  <meta name="Keywords" content="">
+  <meta name="Description" content="">
+  <title>九九乘法表</title>
+  		<style type="text/css">
+		            body,img,div,span{margin:0;padding:0;}
+					body{background:#444;}
+					.box{position:relative;}
+					.container{width:800px;margin:50px auto;}
+					.container .logo{width:300px;height:102px;position:absolute;top:120px;left:500px;}
+					.container .img1{border:25px solid #858585;border-radius:25px;}
+					.container .tongji1{width:90px;height:25px;position:absolute;top:400px;left:500px;font-size:16px;color:white;}
+					.container .tongji2{width:90px;height:25px;position:absolute;top:400px;left:650px;font-size:16px;color:white;}
+					.container .play{width:90px;height:40px;border:1px solid #44a2ff;line-height:40px;text-align:center;color:white;border-radius:15px;position:absolute;top:450px;left:550px;}
+					.container .end{width:90px;height:40px;border:1px solid #44a2ff;line-height:40px;text-align:center;color:white;border-radius:15px;position:absolute;top:450px;left:650px;}
+					.container .play:hover{background:#44a2ff; cursor:pointer;}
+					.container .end:hover{background:#44a2ff;cursor:pointer;}
+					.container .chen{width:600px;height:66px;position:absolute;top:300px;left:450px;}
+					.container .chen span{display:inline-block;width:80px;height:45px;line-height:50px;text-align:center;color:white;}
+					.container .chen span{font-size:30px;display:inline-block;width:80px;height:45px;line-height:50px;text-align:center;color:white;}
+					.container .chen input{display:inline-block;width:80px;height:45px;line-height:50px;text-align:center;color:white;background:#444;border:none;border-bottom:1px solid white;}
+
+		</style>
+ </head>
+ <body>
+		<div class="container">
+					<div class="box"></div>
+					<div class="logo" class="img0"><img src="image/top.png" /></div>
+					<div class="bg"><img src="image/bg.jpg" class="img1" /></div>
+					<div class="chen">
+							<span class="span1">0</span>
+							<span class="span2">×</span >
+							<span class="span3">0</span>
+							<span class="span4">=</span>
+							<input type="text" onkeypress="save(event)" id="answer"/>
+					</div>
+		<div class="tongji1">正确：<span>0</span>&nbsp题</div><div class="tongji2">错误：<span>0</span>&nbsp题</div>
+					<div class="play" onclick="start(event)">开始游戏</div><div></div><div class="end" onclick="end()">结束游戏</div><div></div>
+		</div>
+		<script>
+					var tex=document.getElementsByTagName("span");
+					var inpu=document.getElementsByTagName("input");
+					var answer=document.getElementById("answer");
+					var index=0;   //判断当前游戏状态
+					var dui=0;    //计数正确的回答数
+					var cuo=0;   // 计数错误的回答数
+					var suo;
+					function start(e){
+						e=event||window.event;
+						e.target.innerHTML="游戏中";
+						if(suo==1){
+						alert('请先结束本轮游戏');
+						return false;
+						}
+						console.log(answer);
+						answer.focus();
+						suo=1;
+						index=1;
+						tex[0].innerHTML=parseInt(Math.random()*9+1);
+						tex[2].innerHTML=parseInt(Math.random()*9+1);
+						dui=0;
+						tex[4].innerHTML=dui;
+						cuo=0;
+						tex[5].innerHTML=cuo;
+						}
+					function end(){
+						if(index==0){
+						alert("请先开始比赛");
+						return false;
+						}
+						document.getElementsByClassName("play")[0].innerHTML="开始游戏";
+						suo=0;
+						index=0;
+						alert('本次游戏答题正确：'+dui+'题\n'+'本次游戏答题错误：'+cuo+'题');
+						}
+					function save(e){
+						e=event||window.event;
+						if(e.keyCode==13){
+							if(index!==1){
+							alert("请先开始游戏")
+							inpu[0].value=' ';
+							return false;
+							}
+							var x=tex[0].innerHTML*tex[2].innerHTML;
+							var y=inpu[0].value;
+							console.log(x);
+							console.log(typeof x);
+							console.log(y);
+							if(!Number(y)){
+								alert("请检查输入的是否是一个数字");
+								return false;
+								}
+							if(Number(y)==x){
+									dui++;
+									tex[4].innerHTML=dui;
+								}	
+							else {
+									cuo++;
+									tex[5].innerHTML=cuo;
+									}
+							tex[0].innerHTML=parseInt(Math.random()*9+1);
+							tex[2].innerHTML=parseInt(Math.random()*9+1);
+							inpu[0].value=' ';
+							}
+						
+						}
+
+
+		</script>
+ </body>
+</html>
