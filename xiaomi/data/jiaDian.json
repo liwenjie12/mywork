@@ -1,0 +1,24 @@
+{
+  "lishan":[{"id":0,"word":"热门","event":"listOne"},{"id":1,"word":"电视影音","event":"listTwo"},{"id":2,"word":"电脑","event":"listThree"},{"id":3,"word":"家居","event":"listFour"}],
+  "twoImg":["//i1.mifile.cn/a4/xmad_15453810333749_hDsXv.jpg","//i1.mifile.cn/a4/xmad_14967432043621_gmlxi.jpg"],
+  "listOne": [
+    {"path": "image/phone/phone-list-1.jpg", "name": "小米8&nbsp青春版&nbsp4GB+64GB", "content": "潮流镜面渐变色&nbsp，&nbsp2400万自拍旗舰", "newprice": "1399元&nbsp", "oldprice": "", "biaoqian": "新品", "style": {"backgroundColor": "#83c44e"}},
+    {"path": "image/phone/phone-list-2.png", "name": "小米8&nbsp屏幕指纹版&nbsp8GB+128GB", "content": "全球首款压感屏幕指纹&nbsp，&nbsp双频GPS超精准定位", "newprice": "3599元&nbsp", "oldprice": "", "biaoqian": "新品", "style": {"backgroundColor": "#83c44e"}},
+    {"path": "image/phone/phone-list-3.jpg", "name": "小米8 SE 6GB+64GB", "content": "AI 超感光双摄，三星 AMOLED 屏幕", "newprice": "1699元&nbsp", "oldprice": "1999元", "biaoqian": "减300元", "style": {"backgroundColor": "#e53935"}},
+    {"path": "image/phone/phone-list-4.jpg", "name": "小米MIX 2S 8GB+256GB", "content": "骁龙845 年度旗舰处理器，艺术品般陶瓷机身", "newprice": "3399元&nbsp", "oldprice": "3999元", "biaoqian": "减600元", "style": {"backgroundColor": "#e53935"}},
+    {"path": "image/phone/phone-list-5.jpg", "name": "小米6X 6GB+128GB", "content": "轻薄美观的拍照手机", "newprice": "1599元&nbsp", "oldprice": "1999元", "biaoqian": "享8折", "style": {"backgroundColor": "#e53935"}},
+    {"path": "image/phone/phone-list-6.jpg", "name": "小米Max 3 4GB+64GB", "content": "", "newprice": "1599元&nbsp", "oldprice": "1699元", "biaoqian": "减100元", "style": {"backgroundColor": "#e53935"}},
+    {"path": "image/phone/phone-list-7.jpg", "name": "红米6 Pro 3GB+32GB", "content": "", "newprice": "869元&nbsp", "oldprice": "999元", "biaoqian": "减130元", "style": {"backgroundColor": "#e53935"}}
+    ],
+  "listOnetext":{"name":"小米净水器","pri":"1799元","lei":"热门","path":"//i1.mifile.cn/a1/pms_1521634907.16181074!220x220.jpg"},
+  "listTwo":[
+    {"path": "image/shangou/shangou-image-1.png","name":"米家电水壶&nbsp白色","content":"一杯水&nbsp,&nbsp是一家人的安心","newprice":"1元&nbsp","oldprice":"99元","biaoqian":"1元秒杀","style":{"backgroundColor":"#e53935"}},
+    {"path": "image/shangou/shangou-image-2.jpg","name":"小米手环3腕带&nbsp热力橙","content":"顺滑柔软&nbsp触感舒适","newprice":"1元&nbsp","oldprice":"19.9元","biaoqian":"1元秒杀","style":{"backgroundColor":"#e53935"}},
+    {"path": "image/shangou/shangou-image-3.jpg","name":"小米米家智能摄像机&nbsp白色","content":"智能侦测&nbsp安全守护","newprice":"1元&nbsp","oldprice":"129元","biaoqian":"1元秒杀","style":{"backgroundColor":"#e53935"}},
+    {"path": "image/shangou/shangou-image-4.jpg","name":"小米活塞耳机&nbsp清新版&nbsp白色","content":"新鲜绽放","newprice":"1元&nbsp","oldprice":"29元","biaoqian":"1元秒杀","style":{"backgroundColor":"#e53935"}},
+    {"path": "image/shangou/shangou-image-5.jpg","name":"小米路由器4Q&nbsp蓝色","content":"一键快连智能设备","newprice":"79元&nbsp","oldprice":"99元","biaoqian":"","style":{"backgroundColor":"#ffffff"}},
+    {"path": "image/shangou/shangou-image-6.jpg","name":"电力猫套装","content":"有插座的地方&nbsp就有WIFI","newprice":"185元&nbsp","oldprice":"249元","biaoqian":"","style":{"backgroundColor":"#ffffff"}},
+    {"path": "image/shangou/shangou-image-7.jpg","name":"90分轻薄无缝一体织鹅绒羽绒服&nbsp黑色","content":"轻薄无缝一体织&nbsp,&nbsp仅限黑色 ","newprice":"255元&nbsp","oldprice":"299元","biaoqian":"","style":{"backgroundColor":"#ffffff"}}
+  ],
+  "listTwotext":{"name":"小米盒子 3s","pri":"299元","lei":"电视影音","path":"//i1.mifile.cn/a1/pms_1479190789.95594557!220x220.jpg"}
+}
