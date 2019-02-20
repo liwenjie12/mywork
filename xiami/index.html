@@ -1,0 +1,144 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name=”viewport” content=”width=device-width, initial-scale=1, maximum-scale=1″>
+    <title>小米商城首页</title>
+    <script src="lib/vue.min.js"></script>
+    <link rel="stylesheet" type="text/css" href="css/style.css" />
+    <link rel="stylesheet" type="text/css" href="font/iconfont.css">
+    <script src="https://ajax.aspnetcdn.com/ajax/jquery/jquery-1.9.0.min.js"></script>
+    <script src="https://cdn.staticfile.org/vue-resource/1.5.1/vue-resource.min.js"></script>
+    <script src="js/jquery.lazyload.min.js"></script>
+</head>
+<body>
+    <div id="top-bar" class="top-box">
+       <!--顶部导航条 -->
+        <div class="top-container">
+        <top-list :list="navList" ></top-list>
+        <top-shop :shop="shopList"></top-shop>
+        <top-msg :msg="msgList"></top-msg>
+        <div class="clear"></div>
+        </div>
+    </div>
+        <!--site-nav的布局-->
+    <div class="nav-container">
+        <div class="header-logo">
+            <a href="https://www.mi.com/index.html"></a>
+        </div>
+        <nav-list v-if="flag" :nav="navData" @get="change"></nav-list>
+        <search-button></search-button>
+        <div class='clear'></div>
+    </div>
+    <script src="js/nav-container.js"></script>
+    <div class="img-show" @mouseover="stopPlay" @mouseout="continuePlay">
+        <img v-for="item in imgList" :src="item.path" :key="item.id" :style="item.index" class="shopimg lazy" v-if="flag"/>
+        <category-list></category-list>
+        <left-btn @click.native.prevent="backPlay"></left-btn>
+        <right-btn @click.native="autoPlay"></right-btn>
+    </div>
+    <!--新品推荐******************************************************************-->
+    <div class="hot-image">
+        <business-list></business-list>
+        <div class="hot-image-box"><a class="hot-image-link"><img data-original="image/hot-image-3.jpg" class="lazy"/></a></div>
+        <div class="hot-image-box"><a class="hot-image-link"><img data-original="image/hot-image-2.jpg" class="lazy"/></a></div>
+        <div class="hot-image-box"><a class="hot-image-link"><img data-original="image/hot-image-1.jpg" class="lazy"/></a></div>
+        <div class="clear"></div>
+    </div>
+    <!--<script src="js/new-production.js"></script>-->
+    <div class="xiaomi-shangou" id="shangou">
+        <h2>小米闪购</h2>
+        <ul class="shangou-time">
+            <li>
+                <h3>12:00场</h3>
+                <img src="image/flash.png" />
+                <h3>距离结束还有</h3>
+                <div class="time-hour" v-text="hour"></div>
+                <div class="time-mark">:</div>
+                <div class="time-minute" v-text="min"></div>
+                <div class="time-mark">:</div>
+                <div class="time-second" v-text="sec"></div>
+            </li>
+        </ul>
+        <sg-list></sg-list>
+        <div class="shan-btn">
+            <a href="javascript:" @click='moveBack'><i class="iconfont icon-fanhui"></i></a>
+            <a href="javascript:" @click='moveTo'><i class="iconfont icon-gengduo"></i></a>
+        </div>
+    </div>
+    <div class="ad-box"><img data-original="//i1.mifile.cn/a4/xmad_15444404816837_VdZWU.jpg" class="lazy"/></div>
+    <div class="phone-box" id="phone">
+        <div class="phone-box-one">
+      <h2>手机</h2>
+        <div class="phone-img">
+            <img data-original="//i1.mifile.cn/a4/xmad_1544580545953_UvEXK.jpg" class="lazy"/>
+        </div>
+        <div class="phone-list">
+            <iphone-list></iphone-list>
+        </div>
+        </div>
+    </div>
+    <div class="ad-box">
+        <img data-original="//i1.mifile.cn/a4/xmad_154580559114_sUHzE.jpg" class="lazy"/>
+    </div>
+    <div class="main-shop-box" id="main-shop">
+        <h2>家电</h2>
+        <div class="jiadian-img">
+            <list-img :two="dataAll" v-if="flag1"></list-img>
+            <all-list :one="dataAll" ref="jiadian" v-if="flag1"></all-list>
+            <all-nav :three="dataAll" @get="jiadianFun" v-if="flag1"></all-nav>
+        </div>
+        <h2>智能</h2>
+        <div class="zhineng-img">
+            <list-img :two="dataNew" v-if="flag2"></list-img>
+            <all-list :one="dataNew" ref="zhineng" v-if="flag2"></all-list>
+            <all-nav :three="dataNew" @get="zhinengFun" v-if="flag2"></all-nav>
+        </div>
+        <h2>配件</h2>
+        <div class="dapei-img">
+            <list-img :two="dataPj" v-if="flag3"></list-img>
+            <all-list :one="dataPj" ref="peijian" v-if="flag3"></all-list>
+            <all-nav :three="dataPj" @get="peijianFun" v-if="flag3"></all-nav>
+        </div>
+    </div>
+    <div class="content-box">
+        <h2>内容</h2>
+        <div class="content-container">
+            <ul>
+                <li class="content-alllist content-book" @mouseover="childFun('book')" @mouseout="childFun('book')">
+                    <h2 class="item-book">图书</h2>
+                    <div class="content-list">
+                        <content-list :book="booklist" ref="book"></content-list>
+                    </div>
+                </li>
+                <li class="content-alllist content-miui" @mouseover="childFun('miui')" @mouseout="childFun('miui')">
+                    <h2 class="item-miui">MIUI 主题</h2>
+                    <div class="content-list">
+                        <content-list :book="miuilist" ref="miui"></content-list>
+                    </div>
+                </li>
+                <li class="content-alllist content-youxi" @mouseover="childFun('youxi')" @mouseout="childFun('youxi')">
+                    <h2 class="item-youxi">游戏</h2>
+                    <div class="content-list">
+                        <content-list :book="youxilist" ref="youxi"></content-list>
+                    </div>
+                </li>
+                <li class="content-alllist content-app" @mouseover.stop="childFun('app')" @mouseout.stop="childFun('app')">
+                    <h2 class="item-app">应用</h2>
+                    <div class="content-list">
+                        <content-list :book="applist" ref="app"></content-list>
+                    </div>
+                </li>
+            </ul>
+        </div>
+    </div>
+    <script src="js/allUse.js"></script>
+    <script src="js/top.bar.js"></script>
+    <script src="js/img-show.js"></script>
+    <script src="js/new-production.js"></script>
+    <script src="js/shop-list.js"></script>
+    <script src="js/phone.js"></script>
+    <script src="js/content-box.js"></script>
+    <script src="js/common.js"></script>
+</body>
+</html>
