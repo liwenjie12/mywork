@@ -1,0 +1,126 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <link href="https://cdn.staticfile.org/twitter-bootstrap/3.3.7/css/bootstrap.min.css" rel="stylesheet">
+    <script src="https://cdn.staticfile.org/jquery/2.1.1/jquery.min.js"></script>
+    <script src="https://cdn.staticfile.org/twitter-bootstrap/3.3.7/js/bootstrap.min.js"></script>
+    <style>
+        .main{
+           margin:0px 400px;
+        }
+        thead{
+            background-color:#337ab7;
+            color: #ffffff;
+            font-size: 16px;
+            text-align: center;
+        }
+        tbody{
+            text-align: center;
+        }
+        .mima{
+            background-color: rgb(0, 0, 0);
+            opacity:0.3;
+            position:fixed;
+            top:0px;
+            left:0px;
+            width:100%;
+            height:2000px;
+        }
+        .tanchuang{
+            background-color: #fff;
+            width:300px;
+            height:200px;
+            position:absolute;
+        }
+        /*.hide{*/
+            /*position:absolute;*/
+            /*background-color: #fff;*/
+            /*width:300px;*/
+            /*height:200px;*/
+            /*top:10%;*/
+            /*left:50%;*/
+        /*}*/
+    </style>
+</head>
+<body>
+<div class="mima">
+        <div class="tanchuang">
+            <div>
+                <p>修改密码</p>
+            </div>
+            <div>
+                <label for="newpswd">请输入新密码</label>
+                <input type="text" id="newpswd"/>
+            </div>
+        </div>
+</div>
+<div class="main">
+        <div class="form-group">
+            <label for="userName">名称:</label>
+            <input type="text" name="userName" placeholder="请输入名称" id="userName" class="form-control input-sm"/>
+        </div>
+        <div class="form-group">
+            <label for="password">密码:</label>
+            <input type="text" name="password" placeholder="请输入密码" id="password" class="form-control input-sm"/>
+        </div>
+        <button class="btn btn-primary btn-sm" id="add">添加</button>
+    <table class="table table-bordered table-hover table-responsive">
+        <thead>
+            <tr>
+                <td>名称</td>
+                <td>密码</td>
+                <td>操作</td>
+            </tr>
+        </thead>
+        <tbody>
+            <tr>
+                <td>m19961217</td>
+                <td>www360xz</td>
+                <td>
+                    <button class="btn btn-primary btn-sm delect">删除</button>
+                    <button class="btn btn-primary btn-sm change">密码修改</button>
+                </td>
+            </tr>
+            <tr>
+                <td>admin</td>
+                <td>1234568</td>
+                <td>
+                    <button class="btn btn-primary btn-sm delect">删除</button>
+                    <button class="btn btn-primary btn-sm change">密码修改</button>
+                </td>
+            </tr>
+            <tr>
+                <td>user</td>
+                <td>woshijack</td>
+                <td>
+                    <button class="btn btn-primary btn-sm delect">删除</button>
+                    <button class="btn btn-primary btn-sm change">密码修改</button>
+                </td>
+            </tr>
+        </tbody>
+    </table>
+</div>
+<script>
+    $(function () {
+        function add(){
+            var user=$("#userName").val();
+            var pswd=$("#password").val();
+            $("tbody").append('<tr><td>'+user+'</td><td>'+pswd+'</td><td><button class=\"btn btn-primary btn-sm\">删除</button></td></tr>');
+            $("#userName").val("");
+            $("#password").val("");
+        }
+        function delect(e){
+            $(e.target).parents("tr").remove();
+        }
+        function change(e){
+            $(e.target).parent().siblings().eq(1).html("555");
+        }
+        $("#add").on("click",add);
+        $("table").on("click","button.delect",delect);
+        $("table").on("click","button.change",change);
+    })
+</script>
+</body>
+</html>
