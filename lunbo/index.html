@@ -1,0 +1,145 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>js轮播图组件</title>
+    <link rel="stylesheet" type="text/css" href="css/lunbotu.css" />
+    <style>
+        *{
+            margin:0;
+            padding:0;
+        }
+        .box{
+            margin:0px auto;
+            width:1000px;
+            height:2000px;
+            border-right:1px solid #aaa;
+            border-left:1px solid #aaa;
+        }
+        .box h3{
+            text-align: center;
+            padding:10px 0px;
+            border-bottom:1px solid #aaa;
+            border-top:1px solid #aaa;
+            color:#666;
+        }
+        .item-box{
+            margin:10px auto;
+            border:1px solid #aaa;
+        }
+        .jd .list{
+            background-color: rgba(0,0,0,0);
+        }
+        .iqiyi .list{
+            background-color: rgba(0,0,0,0.4);
+        }
+    </style>
+</head>
+<body>
+    <div class="box">
+        <h3>苏宁易购轮播图</h3>
+        <div class="item-box" id="suning">
+            <div class="item item-active">
+                <img src="image/suning/1.jpg">
+            </div>
+            <div class="item">
+                <img src="image/suning/2.jpg">
+            </div>
+            <div class="item">
+                <img src="image/suning/3.jpg">
+            </div>
+            <div class="item">
+                <img src="image/suning/4.jpg">
+            </div>
+            <div class="item">
+                <img src="image/suning/5.jpg">
+            </div>
+            <div class="item">
+                <img src="image/suning/6.jpg">
+            </div>
+            <div class="item">
+                <img src="image/suning/7.jpg">
+            </div>
+            <div class="item">
+                <img src="image/suning/8.jpg">
+            </div>
+            <a href="javascript:void(0)" class="previous" id="suningPre"><</a>
+            <a href="javascript:void(0)" class="next" id="suningNext">></a>
+            <ul class="list-box">
+                <li class="list color" data-id=0></li>
+                <li class="list" data-id=1></li>
+                <li class="list" data-id=2></li>
+                <li class="list" data-id=3></li>
+                <li class="list" data-id=4></li>
+                <li class="list" data-id=5></li>
+                <li class="list" data-id=6></li>
+                <li class="list" data-id=7></li>
+            </ul>
+        </div>
+        <h3>京东轮播图</h3>
+        <div class="item-box jd" id="jd">
+            <div class="item item-active">
+                <img src="image/jd/1.jpg">
+            </div>
+            <div class="item">
+                <img src="image/jd/2.jpg">
+            </div>
+            <div class="item">
+                <img src="image/jd/3.jpg">
+            </div>
+            <div class="item">
+                <img src="image/jd/4.jpg">
+            </div>
+            <div class="item">
+                <img src="image/jd/5.jpg">
+            </div>
+            <div class="item">
+                <img src="image/jd/6.jpg">
+            </div>
+            <div class="item">
+                <img src="image/jd/7.jpg">
+            </div>
+            <div class="item">
+                <img src="image/jd/8.jpg">
+            </div>
+            <a href="javascript:void(0)" class="previous" id="jdPre"><</a>
+            <a href="javascript:void(0)" class="next" id="jdNext">></a>
+            <ul class="list-box">
+                <li class="list color" data-id=0></li>
+                <li class="list" data-id=1></li>
+                <li class="list" data-id=2></li>
+                <li class="list" data-id=3></li>
+                <li class="list" data-id=4></li>
+                <li class="list" data-id=5></li>
+                <li class="list" data-id=6></li>
+                <li class="list" data-id=7></li>
+            </ul>
+    </div>
+        <h3>爱奇艺轮播图</h3>
+        <div class="item-box iqiyi" id="iqiyi">
+            <div class="item item-active">
+                <img src="image/iqiyi/1.jpg">
+            </div>
+            <div class="item">
+                <img src="image/iqiyi/2.jpg">
+            </div>
+            <div class="item">
+                <img src="image/iqiyi/3.jpg">
+            </div>
+            <div class="item">
+                <img src="image/iqiyi/4.jpg">
+            </div>
+            <a href="javascript:void(0)" class="previous" id="iqiyiPre"></a>
+            <a href="javascript:void(0)" class="next" id="iqiyiNext"></a>
+            <ul class="list-box">
+                <li class="list color" data-id=0>央视元宵晚会:张艺兴活力开场</li>
+                <li class="list" data-id=1>招摇:李成岚为招摇吃醋发飙</li>
+                <li class="list" data-id=2>独孤皇后:陈乔恩陈晓乱世狂恋</li>
+                <li class="list" data-id=3>逆流而上:破产夫妇生活现转机</li>
+            </ul>
+        </div>
+    </div>
+    <script src="js/lunbotu.js" ></script>
+    <script src="js/index.js"></script>
+</body>
+</html>
