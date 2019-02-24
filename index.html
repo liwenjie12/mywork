@@ -3,124 +3,396 @@
 <head>
     <meta charset="UTF-8">
     <title>Title</title>
-    <link href="https://cdn.staticfile.org/twitter-bootstrap/3.3.7/css/bootstrap.min.css" rel="stylesheet">
-    <script src="https://cdn.staticfile.org/jquery/2.1.1/jquery.min.js"></script>
-    <script src="https://cdn.staticfile.org/twitter-bootstrap/3.3.7/js/bootstrap.min.js"></script>
+    <link rel="stylesheet" href="data/animate.css" type="text/css" />
+    <script src="https://apps.bdimg.com/libs/jquery/2.1.4/jquery.min.js"></script>
     <style>
-        .main{
-           margin:0px 400px;
+        @font-face {
+            font-family: 'iconfont';  /* project id 1054531 */
+            src: url('//at.alicdn.com/t/font_1054531_8t59hw9tmkv.eot');
+            src: url('//at.alicdn.com/t/font_1054531_8t59hw9tmkv.eot?#iefix') format('embedded-opentype'),
+            url('//at.alicdn.com/t/font_1054531_8t59hw9tmkv.woff2') format('woff2'),
+            url('//at.alicdn.com/t/font_1054531_8t59hw9tmkv.woff') format('woff'),
+            url('//at.alicdn.com/t/font_1054531_8t59hw9tmkv.ttf') format('truetype'),
+            url('//at.alicdn.com/t/font_1054531_8t59hw9tmkv.svg#iconfont') format('svg');
         }
-        thead{
-            background-color:#337ab7;
-            color: #ffffff;
-            font-size: 16px;
-            text-align: center;
+        body{
+            overflow: hidden;
+            font-size: 14px;
         }
-        tbody{
-            text-align: center;
+        *{
+            margin:0;
+            padding:0;
         }
-        .mima{
-            background-color: rgb(0, 0, 0);
-            opacity:0.3;
-            position:fixed;
-            top:0px;
-            left:0px;
+        a{
+            text-decoration: none;
+            color:#aaa;
+        }
+        ul,li{
+            list-style: none;
+            margin:0;
+            padding:0;
             width:100%;
-            height:2000px;
         }
-        .tanchuang{
-            background-color: #fff;
-            width:300px;
-            height:200px;
+        .item-box{
+            width:100%;
+            box-sizing: content-box;
+            overflow-y: hidden;
+            height:100px;
+            overflow: hidden;
+        }
+        h3{
+            color:#aaa;
+        }
+        .head-top{
+            font-size: 40px;
+            letter-spacing: 10px;
+        }
+        .cate-box{
+            position:relative;
+        }
+        .item-box{
+            position:relative;
+        }
+        .item-box h3{
             position:absolute;
+            top:20%;
+            width:100%;
+            transform:translateX(-50%);
+            text-align: center;
+            color:#ddd;
         }
-        /*.hide{*/
-            /*position:absolute;*/
-            /*background-color: #fff;*/
-            /*width:300px;*/
-            /*height:200px;*/
-            /*top:10%;*/
-            /*left:50%;*/
-        /*}*/
+        .item-box .header-top-data{
+            top:35%;
+        }
+        .item-box h5{
+            position: absolute;
+            color:#fff;
+            font-size: 25px;
+            top:40%;
+            text-align: center;
+            width:100%;
+            letter-spacing:8px;
+        }
+        .cate-list{
+            position:absolute;
+            top:0%;
+            left:0%;
+        }
+        .cate-list-active{
+            display:block;
+            z-index: 100;
+        }
+        .bg-yellow{
+            background: url("data/intro-bg.jpg") no-repeat bottom center;
+        }
+        .bg-white{
+            background-color:white;
+        }
+        .bg-black{
+            background: linear-gradient(to bottom, #6f7275 0%, #31353a 100%);
+        }
+        .header-jianli,.header-zhiwei{
+            color:#fff;
+            font-size: 70px;
+            font-weight:700;
+        }
+        .header-zhiwei{
+            color:#F4D03F;
+        }
+        .next{
+            display: block;
+            position:fixed;
+            bottom:0%;
+            left:50%;
+            display:block;
+            z-index: 1000;
+            transform: translateX(-50%);
+            -webkit-transform: translateX(-50%);
+            -ms-transform: translateX(-50%);
+            -moz-transform: translateX(-50%);
+            font-size: 60px;
+            font-family: iconfont;
+            color:#F4D03F;
+            cursor: pointer;
+            width:80px;
+            height:80px;
+            background-color: rgba(0,0,0,0.2);
+            line-height: 80px;
+            text-align: center;
+            -webkit-border-radius: 50%;
+            -moz-border-radius: 50%;
+            border-radius: 50%;
+            font-weight:100;
+            border:2px solid rgba(255,255,255,0.3);
+        }
+        .next:hover{
+            background-color: rgba(255,255,255,0.2);
+            transition: background-color .5s ease;
+            text-decoration:none;
+            color:#F4D03F;
+        }
+        a:link{
+            text-decoration: none;
+        }
+        .my-photo{
+            width:100%;
+            hight:120px;
+        }
+        .my-photo img{
+            width:120px;
+            height:120px;
+            border-radius:50%;
+            text-align: center;
+            display:block;
+            margin:5% auto 10px;
+        }
+        .my-data,.my-skills,.my-work{
+            width:1100px;
+            position: absolute;
+            bottom:20%;
+            left:50%;
+            transform: translateX(-50%);
+            box-sizing: border-box;
+            height:200px;
+        }
+        .my-work{
+            width:600px;
+            bottom:30%;
+        }
+        .my-data li{
+            display:inline-block;
+            width:250px;
+            box-sizing: border-box;
+            margin-right:20px;
+            text-align: center;
+            vertical-align: top;
+        }
+        .my-data-icon{
+            display:inline-block;
+            font-family: iconfont;
+            font-size:50px;
+            color:#fff;
+            background-color: #474b4f;
+            width:100px;
+            height:100px;
+            border-radius:50%;
+            line-height: 100px;
+            cursor: default;
+        }
+        .my-data-icon:hover,.my-skills-icon:hover{
+            color:#F4D03F;
+            width:120px;
+            height:120px;
+            transition:all 0.5s ease;
+        }
+        .my-data-header,.my-skills-header,.my-work-header{
+            font-size: 18px;
+            font-weight: bold;
+            margin-top:10px;
+            color: #F4D03F;
+        }
+        .my-data-text,.my-work-text{
+            color: #aaa;
+            font-weight: 700;
+        }
+        .my-skills li{
+            display:inline-block;
+            width:150px;
+            box-sizing: border-box;
+            margin-right:20px;
+            text-align: center;
+            vertical-align: top;
+        }
+        .my-work li{
+            display:inline-block;
+            width:250px;
+            box-sizing: border-box;
+            margin-right:45px;
+            text-align: center;
+            vertical-align: top;
+        }
+        .my-skills-icon{
+            display:inline-block;
+            font-family: iconfont;
+            font-size:50px;
+            width:100px;
+            height:100px;
+            border-radius:50%;
+            line-height: 100px;
+            cursor: default;
+            background-color: #474b4f;
+            color:#F4D03F;
+        }
+        .nav{
+            position:fixed;
+            z-index:101;
+            height:80px;
+            width:100%;
+            line-height: 80px;
+            overflow: hidden;
+            padding-right:100px;
+        }
+        .nav li{
+            display:inline-block;
+            width:100px;
+            color:#fff;
+            font-size: 16px;
+            cursor:pointer;
+            float:right;
+            text-align: center;
+        }
+        .clear{
+            clear:right;
+        }
+        .list:hover{
+            color:#F4D03F;
+            transition:all 0.5s ease;
+        }
     </style>
 </head>
 <body>
-<div class="mima">
-        <div class="tanchuang">
-            <div>
-                <p>修改密码</p>
+    <ul class="cate-box">
+        <li class="cate-list cate-list-active">
+            <div class="item-box bg-yellow">
+                <h3 class="animated bounceInDown"><span class="header-jianli">简历</span><span class="header-zhiwei">-初级前端工程师</span></h3>
+                <h5 class="animated zoomIn">追求技术，创新技术</h5>
             </div>
-            <div>
-                <label for="newpswd">请输入新密码</label>
-                <input type="text" id="newpswd"/>
+        </li>
+        <li class="cate-list" style="z-index: 99">
+            <div class="item-box bg-black">
+                <div class="my-photo"><img src="data/me.jpg" /></div>
+                <h3 class="animated bounceInDown head-top header-top-data">个人资料</h3>
+                <ul class="my-data">
+                    <li>
+                        <span class="my-data-icon">&#xe625;</span>
+                        <p class="my-data-header">个人信息</p>
+                        <p class="my-data-text">
+                            姓名:李文杰&nbsp
+                            性别:男<br />
+                            年龄:22&nbsp
+                            籍贯:四川广安<br />
+                        </p>
+                    </li>
+                    <li>
+                        <span class="my-data-icon">&#xe606;</span>
+                        <p class="my-data-header">专业学历</p>
+                        <p class="my-data-text">
+                            专业:微电子科学与工程<br />
+                            学历:大学本科<br />
+                        </p>
+                    </li>
+                    <li>
+                        <span class="my-data-icon">&#xe676;</span>
+                        <p class="my-data-header">毕业院校</p>
+                        <p class="my-data-text">
+                            学校:成都工业学院<br />
+                            地点:成都郫县<br />
+                        </p>
+                    </li>
+                    <li>
+                        <span class="my-data-icon">&#xe649;</span>
+                        <p class="my-data-header">联系方式</p>
+                        <p class="my-data-text">
+                            手机:1848358948<br />
+                            邮箱:1499967138@qq.com<br />
+                        </p>
+                    </li>
+                </ul>
             </div>
-        </div>
-</div>
-<div class="main">
-        <div class="form-group">
-            <label for="userName">名称:</label>
-            <input type="text" name="userName" placeholder="请输入名称" id="userName" class="form-control input-sm"/>
-        </div>
-        <div class="form-group">
-            <label for="password">密码:</label>
-            <input type="text" name="password" placeholder="请输入密码" id="password" class="form-control input-sm"/>
-        </div>
-        <button class="btn btn-primary btn-sm" id="add">添加</button>
-    <table class="table table-bordered table-hover table-responsive">
-        <thead>
-            <tr>
-                <td>名称</td>
-                <td>密码</td>
-                <td>操作</td>
-            </tr>
-        </thead>
-        <tbody>
-            <tr>
-                <td>m19961217</td>
-                <td>www360xz</td>
-                <td>
-                    <button class="btn btn-primary btn-sm delect">删除</button>
-                    <button class="btn btn-primary btn-sm change">密码修改</button>
-                </td>
-            </tr>
-            <tr>
-                <td>admin</td>
-                <td>1234568</td>
-                <td>
-                    <button class="btn btn-primary btn-sm delect">删除</button>
-                    <button class="btn btn-primary btn-sm change">密码修改</button>
-                </td>
-            </tr>
-            <tr>
-                <td>user</td>
-                <td>woshijack</td>
-                <td>
-                    <button class="btn btn-primary btn-sm delect">删除</button>
-                    <button class="btn btn-primary btn-sm change">密码修改</button>
-                </td>
-            </tr>
-        </tbody>
-    </table>
-</div>
-<script>
-    $(function () {
-        function add(){
-            var user=$("#userName").val();
-            var pswd=$("#password").val();
-            $("tbody").append('<tr><td>'+user+'</td><td>'+pswd+'</td><td><button class=\"btn btn-primary btn-sm\">删除</button></td></tr>');
-            $("#userName").val("");
-            $("#password").val("");
-        }
-        function delect(e){
-            $(e.target).parents("tr").remove();
-        }
-        function change(e){
-            $(e.target).parent().siblings().eq(1).html("555");
-        }
-        $("#add").on("click",add);
-        $("table").on("click","button.delect",delect);
-        $("table").on("click","button.change",change);
-    })
-</script>
+        </li>
+        <li class="cate-list" style="z-index: 98">
+            <div class="item-box bg-black">
+                <h3 class="animated bounceInDown head-top">专业技能</h3>
+                <ul class="my-skills" style="padding-left:50px;bottom:25%">
+                    <li>
+                        <span class="my-skills-icon">&#xe706;</span>
+                        <p class="my-skills-header">html</p>
+                    </li>
+                    <li>
+                        <span class="my-skills-icon">&#xe705;</span>
+                        <p class="my-skills-header">css</p>
+                    </li>
+                    <li>
+                        <span class="my-skills-icon">&#xe90a;</span>
+                        <p class="my-skills-header">Javascript</p>
+                    </li>
+                    <li>
+                        <span class="my-skills-icon">&#xe79a;</span>
+                        <p class="my-skills-header">Jquery</p>
+                    </li>
+                    <li>
+                        <span class="my-skills-icon">&#xe681;</span>
+                        <p class="my-skills-header">ajax</p>
+                    </li>
+                    <li>
+                        <span class="my-skills-icon">&#xe799;</span>
+                        <p class="my-skills-header">Vue</p>
+                    </li>
+                </ul>
+            </div>
+        </li>
+        <li class="cate-list" style="z-index: 97">
+            <div class="item-box bg-black">
+                <h3 class="animated bounceInDown head-top">个人作品</h3>
+                <ul class="my-work">
+                    <li>
+                        <span><a href="https://github.com/liwenjie12/mywork/tree/master/xiami/"><img src="data/xiaomi.jpg" /></a></span>
+                        <p class="my-work-header">Vue仿小米商城首页</p>
+                        <p class="my-work-text">
+                            <strong>github代码:</strong><a href="https://github.com/liwenjie12/mywork/tree/master/xiami/" style="color:rgba(244,208,63,0.7)">点击浏览</a><br />
+                            <strong>github地址:</strong><a href="https://liwenjie12.github.io/mywork/xiami/" style="color:rgba(244,208,63,0.7)">点击浏览</a><br />
+                            <strong>个人网址:</strong><a href="http://www.liwenjie12.tk/" style="color:rgba(244,208,63,0.7)">点击浏览</a>
+                        </p>
+                    </li>
+                    <li>
+                        <span><img src="data/lunbotu.jpg" style="width:250px;height:142px"/></span>
+                        <p class="my-work-header">原生js轮播图组件开发案例</p>
+                        <p class="my-work-text">
+                            <strong>github代码:</strong><a href="https://liwenjie12.github.io/mywork/xiami/" style="color:rgba(244,208,63,0.7)">点击浏览</a><br />
+                            <strong>github地址:</strong><a href="https://liwenjie12.github.io/mywork/xiami/" style="color:rgba(244,208,63,0.7)">点击浏览</a><br />
+                        </p>
+                    </li>
+                </ul>
+            </div>
+        </li>
+    </ul>
+    <ul class="nav">
+        <li style="padding-right:50px" id=3 class="list">个人作品</li>
+        <li id=2 class="list">专业技能</li>
+        <li id=1 class="list">个人资料</li>
+        <li id=0 class="list">首页</li>
+        <li class="clear"></li>
+    </ul>
+    <a href="#" class="next" style="color:#F4D03F">&#xeb0a;</a>
+    <script>
+        $.extend({
+            index:0,
+            switch:function () {
+                $(".cate-list").eq($.index).removeClass("animated slideInUp").addClass("animated slideOutUp");
+                $.index++;
+                if($.index==$(".cate-list").length){
+                    $.index=0;
+                }
+                $(".cate-list").eq($.index).removeClass("animated slideOutUp").addClass("animated slideInUp");
+            }
+        });
+        $.fn.getHeight=function(){
+            $("body").css("height",$(window).height());
+            $(this).css("height",$(window).height());
+            // $("body").css("width",$(screen).get(0).width+"px");
+            $(window).on("resize",function () {
+                $(this).css("height",$(window).height());
+            }.bind(this));
+            return this;
+        };
+        $(".next").on("click",$.switch);
+        $(".item-box").getHeight();
+        $(".nav").on("click","li",function (e) {
+            $(".cate-list").eq($.index).removeClass("animated slideInUp").addClass("animated slideOutUp");
+            $.index=$(e.target).attr("id");
+            console.log($.index);
+            $(".cate-list").eq($.index).css("z-index",100).removeClass("animated slideOutUp").addClass("animated slideInUp");
+        })
+    </script>
 </body>
 </html>
