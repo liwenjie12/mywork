@@ -1,0 +1,20 @@
+*{
+    margin:0;
+    padding:0;
+}
+ul,li{
+    list-style: none;
+}
+a{
+    color:#444;
+    text-decoration: none;
+}
+@font-face {
+    font-family: 'iconfont';  /* project id 1056434 */
+    src: url('//at.alicdn.com/t/font_1056434_djr936engda.eot');
+    src: url('//at.alicdn.com/t/font_1056434_djr936engda.eot?#iefix') format('embedded-opentype'),
+    url('//at.alicdn.com/t/font_1056434_djr936engda.woff2') format('woff2'),
+    url('//at.alicdn.com/t/font_1056434_djr936engda.woff') format('woff'),
+    url('//at.alicdn.com/t/font_1056434_djr936engda.ttf') format('truetype'),
+    url('//at.alicdn.com/t/font_1056434_djr936engda.svg#iconfont') format('svg');
+}
