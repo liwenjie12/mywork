@@ -1,0 +1,116 @@
+.qidian-main-box{
+    height: 40px;
+    background-color: #3e3d43;
+    padding:0 30px;
+}
+.qidian-parent-list{
+    line-height: 38px;
+    display: inline-block;
+    border-top:2px solid #3e3d43;
+    color:#ddd;
+    padding: 0 32px;
+    font-size: 16px;
+}
+.qidian-parent-hover{
+    border-top: 2px solid #ed4259;
+    background-color: #252428;
+}
+.qidian-parent-icon{
+     font-family: iconfont;
+     padding-right: 3px;
+     font-size: 20px;
+     display:inline-block;
+     vertical-align: top;
+     font-weight: 700;
+ }
+.qidian-parent-icon1{
+    font-family: iconfont;
+    padding-right: 5px;
+    font-size: 16px;
+    display:inline-block;
+    vertical-align: top;
+    font-weight: 400;
+}
+.game-main-box{
+    height:36px;
+    padding:5px 30px;
+    background-color: #6cae05;
+    box-sizing: border-box;
+}
+.game-parent-list{
+    line-height: 26px;
+    color:#fff;
+    font-size: 14px;
+    padding:0 5px;
+    display:inline-block;
+}
+.game-parent-hover{
+    color:#6daf05;
+    background-color: #fff;
+    font-weight: bold;
+    border-radius: 5px;
+}
+.hao-main-box{
+    height:40px;
+    background: #0aa770;
+    box-sizing: border-box;
+    padding:0 30px;
+}
+.hao-parent-list{
+    color:#fff;
+    font-size: 16px;
+    line-height: 40px;
+    padding:0 10px;
+    display:inline-block;
+}
+.hao-parent-hover{
+    background-color: #00b777;
+}
+.hao-parent-icon{
+    font-family: iconfont;
+    font-size: 8px;
+    display: inline-block;
+    vertical-align: top;
+    margin-left: 3px;
+}
+.hao-child-box{
+    transform:translateX(-10px);
+    -webkit-transform: translateX(-10px);
+    -ms-transform: translateX(-10px);
+    background-color: rgba(17,136,96,.9);
+    display:none;
+    transition: all .5s ease;
+    -ms-transition:all .5ease;
+    -webkit-transition: all .5s ease;
+}
+.hao-child-tag{
+    display: block;
+    padding: 0 10px;
+    text-align: center;
+    color:#fff;
+}
+.hao-child-hover{
+    background: #00b777;
+}
+.hao-child-show{
+    height: 240px;
+    display:block;
+}
+.xiaomi-main-box{
+    color: #b0b0b0;
+    background: #333;
+    height: 40px;
+    padding: 0 30px;
+}
+.xiaomi-parent-tag{
+    font-size: 12px;
+    line-height: 40px;
+    padding:0 5px;
+    display: inline-block;
+}
+.xiaomi-parent-hover{
+    color:#fff;
+}
+.xiaomi-parent-fenge{
+    color: #424242;
+}

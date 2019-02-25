@@ -1,0 +1,50 @@
+.nav-main-box{
+    margin:0;
+    padding:0;
+    width:1000px;
+    height:55px;
+    background-color: #2c323b;
+    padding:0 30px;
+    box-sizing:border-box;
+}
+.nav-parent-list{
+    display: inline-block;
+    line-height:55px;
+    font-size:16px;
+    padding:0 20px;
+    vertical-align:top;
+    box-sizing:border-box;
+    position: relative;
+}
+.nav-parent-hover{
+    color:#fff;
+    background-color: #0c8ed9;
+}
+.nav-parent-icon{
+    font-family: iconfont;
+    padding-left: 6px;
+    font-size: 12px;
+    display:inline-block;
+    vertical-align: top;
+}
+.nav-child-box{
+    background-color: #2c323b;
+    transform: translateX(-20px);
+    -webkit-transform: translateX(-20px);
+    -ms-transform: translateX(-20px);
+    display:none;
+}
+.nav-child-tag{
+    display:block;
+    padding:5px 29px;
+    height:30px;
+    line-height: 30px;
+}
+.nav-child-hover{
+    color:#fff;
+    background-color: #383d44;
+}
+.nav-child-show{
+    display:block;
+}
+/*----------------分割线--------------------------------*/
