@@ -1,0 +1,137 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <style>
+        @font-face {
+            font-family: 'iconfont';  /* project id 1056434 */
+            src: url('//at.alicdn.com/t/font_1056434_djr936engda.eot');
+            src: url('//at.alicdn.com/t/font_1056434_djr936engda.eot?#iefix') format('embedded-opentype'),
+            url('//at.alicdn.com/t/font_1056434_djr936engda.woff2') format('woff2'),
+            url('//at.alicdn.com/t/font_1056434_djr936engda.woff') format('woff'),
+            url('//at.alicdn.com/t/font_1056434_djr936engda.ttf') format('truetype'),
+            url('//at.alicdn.com/t/font_1056434_djr936engda.svg#iconfont') format('svg');
+        }
+        *{
+            margin:0;
+            padding:0;
+        }
+        a{
+            color:#aaa;
+            text-decoration: none;
+        }
+        .box{
+            width:1000px;
+            margin:50px auto;
+            border-left:1px solid #aaa;
+            border-right:1px solid #aaa;
+        }
+        .box h3{
+            text-align: center;
+            padding: 10px 0px;
+            border-bottom: 1px solid #aaa;
+            border-top: 1px solid #aaa;
+            color: #666;
+            margin:10px 0px;
+        }
+        #nav{
+            width:1000px;
+            height:80px;
+            background: #333;
+            color:#b0b0b0;
+            font-size:12px;
+            height: 40px;
+            padding-left:30px;
+            margin-top: 10px;
+            box-sizing:border-box
+        }
+        .xiaomi-hover{
+            color:white;
+        }
+        #game{
+            width:1000px;
+            padding:5px 30px;
+            box-sizing:border-box
+        }
+        #game a{
+            color:#fff;
+        }
+        #game .game-hover{
+            background-color: #fff;
+            color:#6cae05;
+            font-weight: bold;
+        }
+        #qidian{
+            display:inline-block;
+            width:1000px;
+            height:40px;
+            background-color: #3e3d43;
+            padding:0px 30px;
+            margin-top: 10px;
+            box-sizing:border-box
+        }
+        #qidian a{
+            color:#eee;
+            font-weight: 500;
+            font-size: 16px;
+            border-top:2px solid #3e3d43;
+        }
+        #qidian .qidian-hover{
+            background-color:#252428;
+            border-top:2px solid #ed4259;
+        }
+        #qidian .qidian-default{
+            background-color: #fff;
+            padding-right: 50px;
+        }
+        #kugou{
+            margin:0;
+            padding:0;
+            width:1000px;
+            height:55px;
+            background-color: #2c323b;
+            padding:0 30px;
+            box-sizing:border-box
+        }
+        #kugou a{
+            color:#ddd;
+        }
+        #kugou .kugou-hover{
+            color:#fff;
+            background-color: #0c8ed9;
+        }
+        #hao{
+            width:1000px;
+            height:40px;
+            background: #0aa770;
+            padding:0px 30px;
+            box-sizing: border-box;
+        }
+        #hao .hao-hover{
+            background-color: #00b777;
+        }
+        .iconfont{
+            font-family: iconfont;
+        }
+    </style>
+</head>
+<body>
+<div class="box">
+    <h3>小米商城导航条</h3>
+    <div id="nav"></div>
+    <h3>4399小游戏导航条</h3>
+    <div style="width:1000px;height:36px;background-color: #6cae05;border: 1px solid #5f9b01;margin:0 auto;">
+        <div id="game"></div>
+    </div>
+    <h3>起点中文网导航条</h3>
+    <div id="qidian"></div>
+    <h3>酷狗音乐导航条</h3>
+    <div id="kugou"></div>
+    <h3>hao123影视导航条</h3>
+    <div id="hao"></div>
+</div>
+    <script src="js-nav.js"></script>
+    <script src="main.js"></script>
+</body>
+</html>
