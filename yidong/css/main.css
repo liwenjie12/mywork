@@ -17,6 +17,7 @@
 }
 .bottom-fixed ul li{
     height:100%;
+    padding:0 10px
 }
 .bottom-fixed a{
     color:#888;
