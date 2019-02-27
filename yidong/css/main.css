@@ -40,3 +40,7 @@
 .color-red{
     color:red  !important;
 }
+.top-flash-box{
+    width:100%;
+    border:1px solid red;
+}
