@@ -12,6 +12,8 @@
     position: fixed;
     bottom:0%;
     width:100%;
+    height:10%;
+    font-size: 20px;
 }
 .iconfont{
     font-family: iconfont;
