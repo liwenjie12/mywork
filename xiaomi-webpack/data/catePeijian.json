@@ -1,0 +1,22 @@
+{
+  "pc":[
+    {"src": "javascript:", "image": "image/cate/tv/tv/55120120.png", "content": "米家激光投影电视"},
+    {"src": "javascript:", "image": "image/cate/tv/tv/mijiajiguang4k.jpg", "content": "小米电视4A 32英寸"},
+    {"src": "javascript:", "image": "image/cate/tv/tv/TV4A-32.png", "content": "小米电视4A 43英寸青春版"},
+    {"src": "javascript:", "image": "image/cate/tv/tv/TV4A-43QC.png", "content": "小米电视4A 50英寸"},
+    {"src": "javascript:", "image": "image/cate/tv/tv/TV4A-50.png", "content": "小米电视4A 55英寸"},
+    {"src": "javascript:", "image": "image/cate/tv/tv/TV4A-58-x.png", "content": "小米电视4A 58英寸"}
+  ],
+  "pc1":[
+    {"src": "javascript:", "image": "image/cate/tv/tv1/4c-40.jpg", "content": "小米电视4A 65英寸"},
+    {"src": "javascript:", "image": "image/cate/tv/tv1/65120_120.png", "content": "小米电视4C 32英寸"},
+    {"src": "javascript:", "image": "image/cate/tv/tv1/TV4C-32.png", "content": "小米电视4C 40英寸"},
+    {"src": "javascript:", "image": "image/cate/tv/tv1/TV4C-43.png", "content": "小米电视4C 43英寸"},
+    {"src": "javascript:", "image": "image/cate/tv/tv1/TV4C-50.png", "content": "小米电视4C 50英寸"},
+    {"src": "javascript:", "image": "image/cate/tv/tv1/TV4X-43xin.png", "content": "小米电视4X 43英寸"}
+  ],
+  "pc2":[
+    {"src": "javascript:", "image": "image/cate/tv/tv2/65yiti.jpg", "content": "小米电视4X 55英寸"},
+    {"src": "javascript:", "image": "image/cate/tv/tv2/TV4-55.png", "content": "小米电视 体育版"}
+  ]
+}

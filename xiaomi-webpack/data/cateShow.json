@@ -1,0 +1,12 @@
+[
+  {"id":1,"cateOne":"手机","cateTwo":"电话卡","icon":">","link":"javascript:"},
+  {"id":2,"cateOne":"电视","cateTwo":"盒子","icon":">","link":"javascript:"},
+  {"id":3,"cateOne":"家电","cateTwo":"插线板","icon":">","link":"javascript:"},
+  {"id":4,"cateOne":"出行","cateTwo":"穿戴","icon":">","link":"javascript:"},
+  {"id":5,"cateOne":"智能","cateTwo":"路由器","icon":">","link":"javascript:"},
+  {"id":6,"cateOne":"电源","cateTwo":"配件","icon":">","link":"javascript:"},
+  {"id":7,"cateOne":"健康","cateTwo":"儿童","icon":">","link":"javascript:"},
+  {"id":8,"cateOne":"耳机","cateTwo":"音响","icon":">","link":"javascript:"},
+  {"id":9,"cateOne":"生活","cateTwo":"箱包","icon":">","link":"javascript:"},
+  {"id":10,"cateOne":"笔记本","cateTwo":"平板","icon":">","link":"javascript:"}
+]
