@@ -395,10 +395,6 @@
             index:0,
             wheellock:true,
             switch:function (e) {
-                console.log(e);
-                if(e==event){
-                    e=false;
-                }
                 if(!$.wheellock){
                 return false;
                 }
@@ -439,7 +435,7 @@
             })
         }
         $(".cate-box").wheel();
-        $(".next").on("click",$.switch);
+        $(".next").on("click",$.switch,"");
         $(".item-box").getHeight();
         $(".nav").on("click","li",function (e) {
             $(".cate-list").eq($.index).removeClass("animated slideInUp").addClass("animated slideOutUp");
