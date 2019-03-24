@@ -415,13 +415,7 @@
         };
         $.fn.wheel=function(){
             $(this).get(0).addEventListener("wheel",function(event){
-                console.log(event);
-               if(event.wheelDeltaY){
-                    event.wheelDeltaY>0&&$.wheellock==true?alert("我上滚"):$.switch();
-               }
-               else{
-                    event.deltaY>0&&$.wheellock==true?$.switch():alert("我上滚");
-               }
+                event.deltaY>0&&$.wheellock==true?$.switch():alert("我上滚");
             })
         }
         $(".cate-box").wheel();
