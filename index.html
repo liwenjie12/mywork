@@ -412,7 +412,7 @@
         };
         $.fn.wheel=function(){
             $(".cate-box").get(0).addEventListener("wheel",function(){
-                alert("我滚动啦");
+                console.log(event);
             })
         }
         $(".cate-box").wheel();
