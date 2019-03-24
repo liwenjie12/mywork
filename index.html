@@ -444,7 +444,6 @@
         $(".nav").on("click","li",function (e) {
             $(".cate-list").eq($.index).removeClass("animated slideInUp").addClass("animated slideOutUp");
             $.index=$(e.target).attr("id");
-            console.log($.index);
             $(".cate-list").eq($.index).css("z-index",100).removeClass("animated slideOutUp").addClass("animated slideInUp");
         });
     </script>
