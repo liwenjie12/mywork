@@ -398,6 +398,7 @@
                 if(!$.wheellock){
                 return false;
                 }
+                e=e.clientX?null:e;
                 $.wheellock=false;
                 if(!e){
                     $(".cate-list").eq($.index).removeClass("animated slideInUp slideInDown").addClass("animated slideOutUp");
