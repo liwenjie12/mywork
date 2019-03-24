@@ -405,7 +405,7 @@
                 else{
                     $(".cate-list").eq($.index).removeClass("animated slideInUp slideInDown").addClass("animated slideOutDown");
                 }
-                e?$.index++:$.index--;
+                e?$.index--:$.index++;
                 if($.index==$(".cate-list").length){
                     $.index=0;
                 }
