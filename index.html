@@ -3,6 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <title>我的简历</title>
+    <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1" />
     <link rel="stylesheet" href="data/animate.css" type="text/css" />
     <script src="https://apps.bdimg.com/libs/jquery/2.1.4/jquery.min.js"></script>
     <style>
@@ -413,10 +414,10 @@
         $.fn.wheel=function(){
             $(this).get(0).addEventListener("wheel",function(event){
                if(event.wheelDeltaY){
-                    event.wheelDeltaY>0?alert("我上滚"):alert("我下滚");
+                    event.wheelDeltaY>0?alert("我上滚"):$.switch();
                }
                else{
-                    event.deltaY>0?alert("我下滚"):alert("我上滚");
+                    event.deltaY>0?$.switch():alert("我上滚");
                }
             })
         }
