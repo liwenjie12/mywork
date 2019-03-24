@@ -411,7 +411,7 @@
             return this;
         };
         $.fn.wheel=function(){
-            $(this).get(0).addEventListener("wheel",function(){
+            $(this).get(0).addEventListener("wheel",function(event){
                if(event.wheelDeltaY){
                     event.wheelDeltaY>0?alert("我上滚"):alert("我下滚");
                }
