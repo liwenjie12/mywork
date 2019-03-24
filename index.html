@@ -399,7 +399,7 @@
                 return false;
                 }
                 console.log(e);
-                e=e.clientX?null:e;
+                e=e.type=="click"?null:e;
                 $.wheellock=false;
                 if(!e){
                     $(".cate-list").eq($.index).removeClass("animated slideInUp slideInDown").addClass("animated slideOutUp");
