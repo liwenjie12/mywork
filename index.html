@@ -393,7 +393,9 @@
     <script>
         $.extend({
             index:0,
+            wheellock:true,
             switch:function () {
+                $.wheellock=false;
                 $(".cate-list").eq($.index).removeClass("animated slideInUp").addClass("animated slideOutUp");
                 $.index++;
                 if($.index==$(".cate-list").length){
@@ -414,10 +416,10 @@
         $.fn.wheel=function(){
             $(this).get(0).addEventListener("wheel",function(event){
                if(event.wheelDeltaY){
-                    event.wheelDeltaY>0?alert("我上滚"):$.switch();
+                    event.wheelDeltaY>0&&$.wheellock==true?alert("我上滚"):$.switch();
                }
                else{
-                    event.deltaY>0?$.switch():alert("我上滚");
+                    event.deltaY>0&&$.wheellock==true?$.switch():alert("我上滚");
                }
             })
         }
