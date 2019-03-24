@@ -414,7 +414,7 @@
             return this;
         };
         $.fn.wheel=function(){
-            $(this).get(0).addEventListener("wheel",function(event){
+            $("body").get(0).addEventListener("wheel",function(event){
                 event.deltaY>0&&$.wheellock==true?$.switch():alert("我上滚");
             })
         }
