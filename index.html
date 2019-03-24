@@ -395,6 +395,9 @@
             index:0,
             wheellock:true,
             switch:function () {
+                if(!$.wheellock){
+                return false;
+                }
                 $.wheellock=false;
                 $(".cate-list").eq($.index).removeClass("animated slideInUp").addClass("animated slideOutUp");
                 $.index++;
@@ -402,6 +405,7 @@
                     $.index=0;
                 }
                 $(".cate-list").eq($.index).removeClass("animated slideOutUp").addClass("animated slideInUp");
+                setTimeout(function(){$.wheellock=true;},1000)
             }
         });
         $.fn.getHeight=function(){
