@@ -395,6 +395,10 @@
             index:0,
             wheellock:true,
             switch:function (e) {
+                console.log(e);
+                if(e==event){
+                    e=false;
+                }
                 if(!$.wheellock){
                 return false;
                 }
