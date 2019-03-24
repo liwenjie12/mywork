@@ -410,6 +410,11 @@
             }.bind(this));
             return this;
         };
+        $.fn.wheel=function(){
+            $(".cate-box").get(0).addEventListener("wheel",function(){
+                alert("我滚动啦");
+            })
+        }
         $(".next").on("click",$.switch);
         $(".item-box").getHeight();
         $(".nav").on("click","li",function (e) {
@@ -417,7 +422,7 @@
             $.index=$(e.target).attr("id");
             console.log($.index);
             $(".cate-list").eq($.index).css("z-index",100).removeClass("animated slideOutUp").addClass("animated slideInUp");
-        })
+        });
     </script>
 </body>
 </html>
