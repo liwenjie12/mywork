@@ -411,8 +411,13 @@
             return this;
         };
         $.fn.wheel=function(){
-            $(".cate-box").get(0).addEventListener("wheel",function(){
-                console.log(event);
+            $(this).get(0).addEventListener("wheel",function(){
+               if(event.wheelDeltaY){
+                    event.wheelDeltaY>0?alert("我上滚")：alert("我下滚");
+               }
+               else{
+                    event.deltaY>0?alert("我下滚"):alert("我上滚");
+               }
             })
         }
         $(".cate-box").wheel();
