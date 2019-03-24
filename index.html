@@ -419,6 +419,9 @@
         };
         $.fn.wheel=function(){
             $("body").get(0).addEventListener("wheel",function(event){
+                if(event.deltaY>0){
+                alert("是的");
+                }
                 event.deltaY>0&&$.wheellock==true?$.switch():alert("我上滚");
             })
         }
