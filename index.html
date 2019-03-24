@@ -399,7 +399,7 @@
                 return false;
                 }
                 console.log(e);
-                if(e.type=="click"){
+                if(typeof e!="string"){
                     e=null;
                 }
                 $.wheellock=false;
