@@ -3,18 +3,19 @@
 <head>
     <meta charset="UTF-8">
     <title>我的简历</title>
+    <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1" />
     <link rel="stylesheet" href="data/animate.css" type="text/css" />
     <script src="https://apps.bdimg.com/libs/jquery/2.1.4/jquery.min.js"></script>
     <style>
         @font-face {
-            font-family: 'iconfont';  /* project id 1054531 */
-            src: url('//at.alicdn.com/t/font_1054531_8t59hw9tmkv.eot');
-            src: url('//at.alicdn.com/t/font_1054531_8t59hw9tmkv.eot?#iefix') format('embedded-opentype'),
-            url('//at.alicdn.com/t/font_1054531_8t59hw9tmkv.woff2') format('woff2'),
-            url('//at.alicdn.com/t/font_1054531_8t59hw9tmkv.woff') format('woff'),
-            url('//at.alicdn.com/t/font_1054531_8t59hw9tmkv.ttf') format('truetype'),
-            url('//at.alicdn.com/t/font_1054531_8t59hw9tmkv.svg#iconfont') format('svg');
-        }
+              font-family: 'iconfont';  /* project id 1057280 */
+              src: url('//at.alicdn.com/t/font_1057280_2zfelkiv7u9.eot');
+              src: url('//at.alicdn.com/t/font_1057280_2zfelkiv7u9.eot?#iefix') format('embedded-opentype'),
+              url('//at.alicdn.com/t/font_1057280_2zfelkiv7u9.woff2') format('woff2'),
+              url('//at.alicdn.com/t/font_1057280_2zfelkiv7u9.woff') format('woff'),
+              url('//at.alicdn.com/t/font_1057280_2zfelkiv7u9.ttf') format('truetype'),
+              url('//at.alicdn.com/t/font_1057280_2zfelkiv7u9.svg#iconfont') format('svg');
+            }
         body{
             overflow: hidden;
             font-size: 14px;
@@ -198,9 +199,9 @@
         }
         .my-skills li{
             display:inline-block;
-            width:150px;
+            width:130px;
             box-sizing: border-box;
-            margin-right:20px;
+            margin-right:10px;
             text-align: center;
             vertical-align: top;
         }
@@ -318,7 +319,7 @@
                         <p class="my-skills-header">css</p>
                     </li>
                     <li>
-                        <span class="my-skills-icon">&#xe90a;</span>
+                        <span class="my-skills-icon">&#xe6d0;</span>
                         <p class="my-skills-header">Javascript</p>
                     </li>
                     <li>
@@ -326,12 +327,16 @@
                         <p class="my-skills-header">Jquery</p>
                     </li>
                     <li>
-                        <span class="my-skills-icon">&#xe681;</span>
+                        <span class="my-skills-icon">&#xe652;</span>
                         <p class="my-skills-header">ajax</p>
                     </li>
                     <li>
                         <span class="my-skills-icon">&#xe799;</span>
                         <p class="my-skills-header">Vue</p>
+                    </li>
+                     <li>
+                        <span class="my-skills-icon">&#xe7c9;</span>
+                        <p class="my-skills-header">PHP</p>
                     </li>
                 </ul>
             </div>
@@ -341,11 +346,11 @@
                 <h3 class="animated bounceInDown head-top">个人作品</h3>
                 <ul class="my-work">
                     <li>
-                        <span><a href="https://github.com/liwenjie12/mywork/tree/master/xiami/"><img src="data/xiaomi.jpg" /></a></span>
+                        <span><a href="https://liwenjie12.github.io/mywork/xiaomi-webpack/"><img src="data/xiaomi.jpg" /></a></span>
                         <p class="my-work-header">Vue仿小米商城首页</p>
                         <p class="my-work-text">
-                            <strong>github代码:</strong><a href="https://github.com/liwenjie12/mywork/tree/master/xiami/" style="color:rgba(244,208,63,0.7)">点击浏览</a><br />
-                            <strong>github地址:</strong><a href="https://liwenjie12.github.io/mywork/xiami/" style="color:rgba(244,208,63,0.7)">点击浏览</a><br />
+                            <strong>github代码:</strong><a href="https://github.com/liwenjie12/mywork/tree/master/xiaomi-webpack" style="color:rgba(244,208,63,0.7)">点击浏览</a><br />
+                            <strong>github地址:</strong><a href="https://liwenjie12.github.io/mywork/xiaomi-webpack/" style="color:rgba(244,208,63,0.7)">点击浏览</a><br />
                             <strong>个人网址:</strong><a href="http://www.liwenjie12.tk/" style="color:rgba(244,208,63,0.7)">点击浏览</a>
                         </p>
                     </li>
@@ -388,13 +393,34 @@
     <script>
         $.extend({
             index:0,
-            switch:function () {
-                $(".cate-list").eq($.index).removeClass("animated slideInUp").addClass("animated slideOutUp");
-                $.index++;
+            wheellock:true,
+            switch:function (e) {
+                if(!$.wheellock){
+                return false;
+                }
+                console.log(e);
+                if(typeof e!="string"){
+                    e=null;
+                }
+                $.wheellock=false;
+                if(!e){
+                    $(".cate-list").eq($.index).removeClass("animated slideInUp slideInDown").addClass("animated slideOutUp");
+                }
+                else{
+                    $(".cate-list").eq($.index).removeClass("animated slideInUp slideInDown").addClass("animated slideOutDown");
+                }
+                e?$.index--:$.index++;
                 if($.index==$(".cate-list").length){
                     $.index=0;
                 }
-                $(".cate-list").eq($.index).removeClass("animated slideOutUp").addClass("animated slideInUp");
+                $.index<=-1?$.index=$(".cate-list").length-1:null;
+                if(!e){
+                    $(".cate-list").eq($.index).removeClass("animated slideOutUp slideOutDown").addClass("animated slideInUp");
+                }
+                else{
+                    $(".cate-list").eq($.index).removeClass("animated slideOutUp slideOutDown").addClass("animated slideInDown");
+                }
+                setTimeout(function(){$.wheellock=true;},1000)
             }
         });
         $.fn.getHeight=function(){
@@ -406,14 +432,20 @@
             }.bind(this));
             return this;
         };
+        $.fn.wheel=function(){
+            $("body").get(0).addEventListener("wheel",function(event){
+                event.deltaY>0&&$.wheellock==true?$.switch():null;
+                event.deltaY<0&&$.wheellock==true?$.switch("true"):null;
+            })
+        }
+        $(".cate-box").wheel();
         $(".next").on("click",$.switch);
         $(".item-box").getHeight();
         $(".nav").on("click","li",function (e) {
             $(".cate-list").eq($.index).removeClass("animated slideInUp").addClass("animated slideOutUp");
             $.index=$(e.target).attr("id");
-            console.log($.index);
             $(".cate-list").eq($.index).css("z-index",100).removeClass("animated slideOutUp").addClass("animated slideInUp");
-        })
+        });
     </script>
 </body>
 </html>
