@@ -1,0 +1,133 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name=”viewport” content=”width=device-width, initial-scale=1, maximum-scale=1″>
+    <title>小米商城首页</title>
+    <link rel="stylesheet" type="text/css" href="font/iconfont.css">
+    <script src="https://apps.bdimg.com/libs/jquery/2.1.4/jquery.min.js"></script>
+<link href="style/index.css" rel="stylesheet"></head>
+<body>
+    <div id="top-bar" class="top-box">
+       <!--顶部导航条 -->
+        <div class="top-container">
+            <top-list :list="navList"></top-list>
+            <top-shop :shop="shopList"></top-shop>
+            <top-msg :msg="msgList"></top-msg>
+            <div class="clear"></div>
+        </div>
+    </div>
+        <!--site-nav的布局-->
+    <div class="nav-container">
+        <div class="header-logo">
+            <a href="https://www.mi.com/index.html"></a>
+        </div>
+        <nav-list :nav="navData" :flag="flag" @get="change"></nav-list>
+        <search-button></search-button>
+        <div class='clear'></div>
+    </div>
+    <div class="img-show" @mouseover="stopplay" @mouseout="continueplay">
+        <transition name="fade" tag="div" v-for="item in imgList">
+            <img :src="item.path" :key="item.id" class="shopimg lazy" v-if="flag" v-show="count==item.id?true:false"/>
+        </transition>
+        <category-list></category-list>
+        <left-btn @click.native.prevent="backplay"></left-btn>
+        <right-btn @click.native.prevent="autoplay"></right-btn>
+    </div>
+    <!--新品推荐******************************************************************-->
+    <div class="hot-image">
+        <business-list></business-list>
+        <div class="hot-image-box"><a class="hot-image-link"><img src="image/hot-image-3.jpg" class="lazy"/></a></div>
+        <div class="hot-image-box"><a class="hot-image-link"><img src="image/hot-image-2.jpg" class="lazy"/></a></div>
+        <div class="hot-image-box"><a class="hot-image-link"><img src="image/hot-image-1.jpg" class="lazy"/></a></div>
+        <div class="clear"></div>
+    </div>
+    <!--<script src="js/new-production.js"></script>-->
+    <div class="xiaomi-shangou" id="shangou">
+        <h2>小米闪购</h2>
+        <ul class="shangou-time">
+            <li>
+                <h3>12:00场</h3>
+                <img src="image/flash.png" />
+                <h3>距离结束还有</h3>
+                <div class="time-hour" v-text="hour"></div>
+                <div class="time-mark">:</div>
+                <div class="time-minute" v-text="min"></div>
+                <div class="time-mark">:</div>
+                <div class="time-second" v-text="sec"></div>
+            </li>
+        </ul>
+        <sg-list></sg-list>
+        <div class="shan-btn">
+            <a href="javascript:" @click='moveBack'><i class="iconfont icon-fanhui"></i></a>
+            <a href="javascript:" @click='moveTo'><i class="iconfont icon-gengduo"></i></a>
+        </div>
+    </div>
+    <div class="ad-box"><img src="//i1.mifile.cn/a4/xmad_15444404816837_VdZWU.jpg" class="lazy"/></div>
+    <div class="phone-box" id="phone">
+        <div class="phone-box-one">
+      <h2>手机</h2>
+        <div class="phone-img">
+            <img src="//i1.mifile.cn/a4/xmad_1544580545953_UvEXK.jpg" class="lazy"/>
+        </div>
+        <div class="phone-list">
+            <iphone-list></iphone-list>
+        </div>
+        </div>
+    </div>
+    <div class="ad-box">
+        <img src="//i1.mifile.cn/a4/xmad_154580559114_sUHzE.jpg" class="lazy"/>
+    </div>
+    <div class="main-shop-box" id="main-shop">
+        <h2>家电</h2>
+        <div class="jiadian-img">
+            <list-img :two="jiadianImg" v-if="flag1"></list-img>
+            <all-list :one="dataAll.tv" :two="dataAll.pc" ref="jiadian" v-if="flag1"></all-list>
+            <all-nav :three="jiadian" @get="jiadianFun" v-if="flag1"></all-nav>
+        </div>
+        <h2>智能</h2>
+        <div class="zhineng-img">
+            <list-img :two="zhinengImg" v-if="flag2"></list-img>
+            <all-list :one="dataNew.router" :two="dataNew.out" ref="zhineng" v-if="flag2"></all-list>
+            <all-nav :three="zhineng" @get="zhinengFun" v-if="flag2"></all-nav>
+        </div>
+        <h2>配件</h2>
+        <div class="dapei-img">
+            <list-img :two="peijianImg" v-if="flag3"></list-img>
+            <all-list :one="dataPj.ear" :two="dataPj.power" ref="peijian" v-if="flag3"></all-list>
+            <all-nav :three="peijian" @get="peijianFun" v-if="flag3"></all-nav>
+        </div>
+    </div>
+    <div class="content-box">
+        <h2>内容</h2>
+        <div class="content-container">
+            <ul>
+                <li class="content-alllist content-book" @mouseover="childFun('book')" @mouseout="childFun('book')">
+                    <h2 class="item-book">图书</h2>
+                    <div class="content-list">
+                        <content-list :book="booklist" ref="book"></content-list>
+                    </div>
+                </li>
+                <li class="content-alllist content-miui" @mouseover="childFun('miui')" @mouseout="childFun('miui')">
+                    <h2 class="item-miui">MIUI 主题</h2>
+                    <div class="content-list">
+                        <content-list :book="miuilist" ref="miui"></content-list>
+                    </div>
+                </li>
+                <li class="content-alllist content-youxi" @mouseover="childFun('youxi')" @mouseout="childFun('youxi')">
+                    <h2 class="item-youxi">游戏</h2>
+                    <div class="content-list">
+                        <content-list :book="youxilist" ref="youxi"></content-list>
+                    </div>
+                </li>
+                <li class="content-alllist content-app" @mouseover.stop="childFun('app')" @mouseout.stop="childFun('app')">
+                    <h2 class="item-app">应用</h2>
+                    <div class="content-list">
+                        <content-list :book="applist" ref="app"></content-list>
+                    </div>
+                </li>
+            </ul>
+        </div>
+    </div>
+<script type="text/javascript" src="js/public.js"></script><script type="text/javascript" src="js/index.js"></script></body>
+</html>

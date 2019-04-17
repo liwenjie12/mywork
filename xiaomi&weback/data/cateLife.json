@@ -1,0 +1,31 @@
+{
+  "phone":[
+    {"src": "javascript:", "image": "image/cate/phone/phone/m8-80.png", "content": "小米MIX 3"},
+    {"src": "javascript:", "image": "image/cate/phone/phone/m8se-80.png", "content": "小米8 青春版"},
+    {"src": "javascript:", "image": "image/cate/phone/phone/mix2s80-80white.png", "content": "小米8 屏幕指纹版"},
+    {"src": "javascript:", "image": "image/cate/phone/phone/mix3-80.png", "content": "小米8"},
+    {"src": "javascript:", "image": "image/cate/phone/phone/pingmu-80.png", "content": "小米8 SE"},
+    {"src": "javascript:", "image": "image/cate/phone/phone/qingchun-80.png", "content": "小米MIX 2S"}
+  ],
+  "phone1":[
+    {"src": "javascript:", "image": "image/cate/phone/phone1/6pro140-140.png", "content": "小米Max 3"},
+    {"src": "javascript:", "image": "image/cate/phone/phone1/80808080808080.jpg", "content": "小米6X"},
+    {"src": "javascript:", "image": "image/cate/phone/phone1/heisha-80.png", "content": "黑鲨游戏手机 Helo"},
+    {"src": "javascript:", "image": "image/cate/phone/phone1/heishahelo-80.png", "content": "黑鲨游戏手机"},
+    {"src": "javascript:", "image": "image/cate/phone/phone1/max3-80-80.png", "content": "红米Note 7"},
+    {"src": "javascript:", "image": "image/cate/phone/phone1/note780-80.png", "content": "红米6 Pro"}
+  ],
+  "phone2":[
+    {"src": "javascript:", "image": "image/cate/phone/phone2/6AAAA.png", "content": "红米6"},
+    {"src": "javascript:", "image": "image/cate/phone/phone2/80.jpg", "content": "红米6A"},
+    {"src": "javascript:", "image": "image/cate/phone/phone2/666666.png", "content": "红米Note 5"},
+    {"src": "javascript:", "image": "image/cate/phone/phone2/compare.jpg", "content": "移动4G+专区"},
+    {"src": "javascript:", "image": "image/cate/phone/phone2/mifenka-1.jpg", "content": "对比手机"},
+    {"src": "javascript:", "image": "image/cate/phone/phone2/note5-80-80.png", "content": "米粉卡 日租卡"}
+  ],
+  "phone3":[
+    {"src": "javascript:", "image": "image/cate/phone/phone3/mimobile.jpg", "content": "小米移动 电话卡"},
+    {"src": "javascript:", "image": "image/cate/phone/phone3/weixiu80-80.png", "content": "手机上门维修"},
+    {"src": "javascript:", "image": "image/cate/phone/phone3/yunfuwu.jpg", "content": "云服务空间月卡"}
+  ]
+}

@@ -1,0 +1,14 @@
+{
+  "jiadian":[
+    {"src": "javascript:", "image": "image/cate/jiadian/jiadian/jingshuiqi80haha.jpg", "content": "米家互联网洗烘一体机"},
+    {"src": "javascript:", "image": "image/cate/jiadian/jiadian/kongtiaoguan140.png", "content": "米家互联网空调一级能效"},
+    {"src": "javascript:", "image": "image/cate/jiadian/jiadian/lvxinbashi.png", "content": "米家互联网空调"},
+    {"src": "javascript:", "image": "image/cate/jiadian/jiadian/mijiakongtiao.jpg", "content": "米家空调"},
+    {"src": "javascript:", "image": "image/cate/jiadian/jiadian/xiyiji.jpg", "content": "净水器"},
+    {"src": "javascript:", "image": "image/cate/jiadian/jiadian/yijikongtiao80.jpg", "content": "净水器滤芯"}
+  ],
+  "jiadian1":[
+    {"src": "javascript:", "image": "image/cate/jiadian/jiadian1/jiqiren.jpg", "content": "扫地机器人"},
+    {"src": "javascript:", "image": "image/cate/jiadian/jiadian1/saodipeijian-80.jpg", "content": "扫地机配件"}
+  ]
+}

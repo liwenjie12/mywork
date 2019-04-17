@@ -1,0 +1,64 @@
+{
+  "mix":[
+    {"src":"image/navshop/phone/mix3-320.png","header":"小米MIX 3","price":"3299元起","content":"新品"},
+    {"src":"image/navshop/phone/pc-320-220-mi8.png","header":"小米MIX 3","price":"1399元起","content":""},
+    {"src":"image/navshop/phone/pc-320-220-mi8se.png","header":"小米8","price":"2699元起","content":""},
+    {"src":"image/navshop/phone/pc-320-miplay-1.png","header":"小米8","price":"1099元","content":"新品"},
+    {"src":"image/navshop/phone/qingchun-320.png","header":"小米8","price":"1699元起","content":""}
+  ],
+  "redmi":[
+    {"src":"image/navshop/redmi/6A320.png","header":"小米MIX 3","price":"3299元起","content":"新品"},
+    {"src":"image/navshop/redmi/6pro320-220.png","header":"小米MIX 3","price":"1399元起","content":""},
+    {"src":"image/navshop/redmi/666320.png","header":"小米8","price":"2699元起","content":""},
+    {"src":"image/navshop/redmi/note5-320-220.png","header":"小米8","price":"1099元","content":"新品"},
+    {"src":"image/navshop/redmi/note7320-220.png","header":"小米8","price":"1699元起","content":""}
+  ],
+  "tv":[
+    {"src":"image/navshop/tv/4a43.png","header":"小米MIX 3","price":"3299元起","content":"新品"},
+    {"src":"image/navshop/tv/4A-55.jpg","header":"小米MIX 3","price":"1399元起","content":""},
+    {"src":"image/navshop/tv/4s75.png","header":"小米8","price":"2699元起","content":""},
+    {"src":"image/navshop/tv/32.png","header":"小米8","price":"1099元","content":"新品"},
+    {"src":"image/navshop/tv/50.png","header":"小米8","price":"1699元起","content":""},
+    {"src":"image/navshop/tv/475toutu.png","header":"小米8","price":"1699元起","content":""}
+  ],
+  "pc":[
+    {"src":"image/navshop/pc/320x220biiben.png","header":"小米MIX 3","price":"3299元起","content":"新品"},
+    {"src":"image/navshop/pc/bijiben32012.5.jpg","header":"小米MIX 3","price":"1399元起","content":""},
+    {"src":"image/navshop/pc/daohang13.3.jpg","header":"小米8","price":"2699元起","content":""},
+    {"src":"image/navshop/pc/pingbanok.png","header":"小米8","price":"1099元","content":"新品"},
+    {"src":"image/navshop/pc/WechatIMG603.png","header":"小米8","price":"1699元起","content":""},
+    {"src":"image/navshop/pc/xinbijiben.png","header":"小米8","price":"1699元起","content":""}
+  ],
+  "jiadian":[
+    {"src":"image/navshop/jiadian/320_220.jpg","header":"小米MIX 3","price":"3299元起","content":"新品"},
+    {"src":"image/navshop/jiadian/saodijiqiren320-220.jpg","header":"小米MIX 3","price":"1399元起","content":""},
+    {"src":"image/navshop/jiadian/xiaomijingshuiqi.jpg","header":"小米8","price":"2699元起","content":""},
+    {"src":"image/navshop/jiadian/xinfeng.jpg","header":"小米8","price":"1099元","content":"新品"},
+    {"src":"image/navshop/jiadian/yijinegxiaokongtiaoxin.jpg","header":"小米8","price":"1699元起","content":""},
+    {"src":"image/navshop/jiadian/yijinengxiao320.jpg","header":"小米8","price":"1699元起","content":""}
+  ],
+  "new":[
+    {"src":"image/navshop/new/air-1.png","header":"小米MIX 3","price":"3299元起","content":"新品"},
+    {"src":"image/navshop/new/hd-1.png","header":"小米MIX 3","price":"1399元起","content":""},
+    {"src":"image/navshop/new/mix3-320.png","header":"小米8","price":"2699元起","content":""},
+    {"src":"image/navshop/new/pc-320-miplay-1.png","header":"小米8","price":"1099元","content":"新品"},
+    {"src":"image/navshop/new/pro-1.png","header":"小米8","price":"1699元起","content":""},
+    {"src":"image/navshop/new/zhu-1.png","header":"小米8","price":"1699元起","content":""}
+  ],
+  "router":[
+    {"src":"image/navshop/router/3A.png","header":"小米MIX 3","price":"3299元起","content":"新品"},
+    {"src":"image/navshop/router/3G.png","header":"小米MIX 3","price":"1399元起","content":""},
+    {"src":"image/navshop/router/luyouqi41C.jpg","header":"小米8","price":"2699元起","content":""},
+    {"src":"image/navshop/router/PRO.png","header":"小米8","price":"1099元","content":"新品"},
+    {"src":"image/navshop/router/quanbuluyouqi.png","header":"小米8","price":"1699元起","content":""},
+    {"src":"image/navshop/router/xiaomiluyouqi4.png","header":"小米8","price":"1699元起","content":""}
+  ],
+  "zhineng":[
+    {"src":"image/navshop/zhineng/airdots.jpg","header":"小米MIX 3","price":"3299元起","content":"新品"},
+    {"src":"image/navshop/zhineng/shouhuanNFC.jpg","header":"小米MIX 3","price":"1399元起","content":""},
+    {"src":"image/navshop/zhineng/tixudao.jpg","header":"小米8","price":"2699元起","content":""},
+    {"src":"image/navshop/zhineng/xiaoaimini.jpg","header":"小米8","price":"1099元","content":"新品"},
+    {"src":"image/navshop/zhineng/xishouj.jpg","header":"小米8","price":"1699元起","content":""},
+    {"src":"image/navshop/zhineng/yuntai.jpg","header":"小米8","price":"1699元起","content":""}
+  ]
+}
